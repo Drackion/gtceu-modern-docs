@@ -34,15 +34,22 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 
 ```js title="test_kinetic_machine.js"
 GTCEuStartupEvents.registry('gtceu:machine', event => {
-    
+    event.create('test_electric', 'kinetic', GTValues.LV, GTValues.MV, GTValues.HV) // (1)
+        .recipeType('test_recipe_type')
+        .tankScalingFunction(tier => tier * 3200)
 })
 ```
 
+1. Machine ID, Machine Type, Voltage Tiers
 
 ## Creating Custom Generator
 
 ```js
 GTCEuStartupEvents.registry('gtceu:machine', event => {
-    
+    event.create('test_electric', 'generator', GTValues.LV, GTValues.MV, GTValues.HV) // (1)
+        .recipeType('test_recipe_type')
+        .tankScalingFunction(tier => tier * 3200)
 })
 ```
+
+1. Machine ID, Machine Type, Voltage Tiers

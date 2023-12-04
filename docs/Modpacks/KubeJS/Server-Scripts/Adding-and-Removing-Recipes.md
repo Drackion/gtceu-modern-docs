@@ -48,6 +48,9 @@ ServerEvents.recipes(event =>
                 },
                 {
                     mod: 'minecraft'
+                },
+                {
+                    id: 'gtceu:alloy_smelter/alloy_smelt_bronze_to_ingot'
                 }
             ]
         )
